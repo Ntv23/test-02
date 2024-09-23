@@ -2,7 +2,6 @@ import Header from "./component/Header"
 import Banner from "./component/Banner"
 import Section from "./Section"
 import Footer from  "./component/Footer"
-import Chat from "./component/Chat"
 
 function App() {
 
@@ -12,7 +11,6 @@ function App() {
     <Banner />
     <Section />
     <Footer />
-    <Chat />
     </>
   )
 }
