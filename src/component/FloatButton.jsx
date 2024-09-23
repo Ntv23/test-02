@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { BsMessenger } from "react-icons/bs";
+import { FaYoutube } from "react-icons/fa6";
+import { HiChatBubbleLeftRight } from "react-icons/hi2";
 
 const FloatButton = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -6,23 +9,29 @@ const FloatButton = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  const handleSupportClick = () => {
+    window.Tawk_API && window.Tawk_API.toggle();
+  };
   return (
     <div className="fixed bottom-10 right-4 flex flex-col items-end space-y-2 z-50">
       <div
-        className={`flex flex-col items-end transition-transform duration-300 ${
+        className={`flex flex-col items-end space-y-2 transition-transform duration-300 ${
           isOpen
             ? "transform translate-y-0"
             : "transform translate-y-12 opacity-0 pointer-events-none"
         }`}
       >
-        <button className="bg-blue-500 text-white px-4 py-2 rounded-full shadow-lg transition-transform duration-300 transform hover:scale-105">
-          Chat với admin
+        <button className="text-blue transition-transform duration-300 transform hover:scale-105">
+          <BsMessenger className="text-blue-500" size={"32px"} />
         </button>
-        <button className="bg-green-500 text-white px-4 py-2 rounded-full shadow-lg transition-transform duration-300 transform hover:scale-105">
-          Gửi email
+        <button className="text-white transition-transform duration-300 transform hover:scale-105">
+          <FaYoutube className="text-red-500" size={"36px"} />
         </button>
-        <button className="bg-yellow-500 text-white px-4 py-2 rounded-full shadow-lg transition-transform duration-300 transform hover:scale-105">
-          Gọi hỗ trợ
+        <button 
+        onClick={handleSupportClick}
+        className="text-white transition-transform duration-300 transform hover:scale-105">
+          <HiChatBubbleLeftRight className="text-black" size={"36px"}/>
         </button>
       </div>
 

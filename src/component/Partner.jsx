@@ -32,7 +32,7 @@ const Partner = () => {
               ĐỐI TÁC <span className="font-bold">CỦA HKK</span>
             </h1>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-3 max-h-[500px] overflow-auto">
+          <div className="custom-scrollbar mt-0 md:mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-3 max-h-[500px] overflow-auto">
             {[...Array(8)].map((_, index) => (
               <div key={index} className="bg-gray-300 rounded-xl">
                 <img src={partnerlogo} alt="HKK" className="w-full" />
